@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/time.css">
     <link rel="stylesheet" href="./css/background.css">
-    <title>Time</title>
+    <link rel="stylesheet" href="./css/pass.css">
+    <title>Pass Generator</title>
 </head>
 <body>
-    <div class="background" id="background"></div>
     <header>
         <div class ="menu">
             <a id="btn" href="./index.html">Go to Index</a>
             <a id="btn" href="./time.html">Go to Time</a>
-            <a id="btn" href="./pass.html">Go to Pass Generator</a>
+            <a id="btn" href="./background.html">Go to Background</a>
         </div>
     </header>
+    <div class="background" id="background"></div>
 
     <div class="container">
         <div class="element">
-            <div id="time" class="time"></div>
-            <div id="day" class="day"></div>
-            <p id="text" class="text"></p>
+            <h1>Generador de Contraseñas</h1>
+            <p>Número de Caracteres: </p><input type="number" id="length" class="input" value="12" min="12" max="50">
+            <button id="btn" class="btn">Generar Contraseña</button>
+            <p id="passGen" class="pass">1234</p>
         </div>
-    </div>
-
-    <script src="./js/time.js"></script>
     <script type=module src="./js/background.js"></script>
 </body>
 </html>

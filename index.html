@@ -13,6 +13,7 @@
     <div class ="menu">
         <a id="btn" href="./background.html">Go to Background</a>
         <a id="btn" href="./time.html">Go to Time</a>
+        <a id="btn" href="./pass.html">Go to Pass Generator</a>
     </div>
 
     <div class="container">
@@ -24,7 +25,9 @@
             <div id="day" class="day"></div>
         </div>
         <div class="element">
-            
+            <p>Número de Caracteres: </p><input type="number" id="length" class="input" value="12" min="12" max="50">
+            <button id="btn" class="btn">Generar Contraseña</button>
+            <p id="passGen" class="pass">1234</p>
         </div>
         <div class="element">
             
@@ -36,6 +39,7 @@
 
     <script src="./js/index.js"></script>
     <script src="./js/time.js"></script>
+    <script src="./js/pass.js"></script>
     <script type=module src="./js/background.js"></script>
 </body>
 </html>
