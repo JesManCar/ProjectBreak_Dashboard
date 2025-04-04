@@ -1,32 +1,53 @@
 import images from './imagesArray.js';
 
 const body = document.getElementById("background");
+let selector;
 
-console.log(images);
-
-
-function setBackground(){
-    body.style.backgroundImage = `linear-gradient(rgba(182, 182, 182, 0.37), rgba(61, 61, 61, 0.616)),
-    url('${images[0].path}${images[0].imgs[Math.floor(Math.random() * images[0].imgs.length)]}')`;
-
+if(document.getElementById("select")){
+    selector = document.getElementById("select");
 }
+let type = localStorage.getItem("backgroundType") || 0;
 
+function setBackground(type){
+    body.style.backgroundImage = `linear-gradient(rgba(182, 182, 182, 0.37), rgba(61, 61, 61, 0.616)),
+    url('${images[type].path}${images[type].imgs[Math.floor(Math.random() * images[type].imgs.length)]}')`;
+
+};
 function smoothChange(){
     body.style.animation= "fadeInOut 2s linear";
-    //body.style.backgroundImage = "";    
     setTimeout(() => {
         body.style.animation= "none";
     }, 2000)
 }
 
-setBackground()
-
-//smoothChange();
-
-setInterval(() => {
+function Background(){
+    if(selector && selector.value) type = selector.value
+    localStorage.setItem("backgroundType", type)
     smoothChange();
     setTimeout(() => {
-        setBackground()
+        setBackground(type)
     }, 1000)
 }
-, 6000)
+
+function selectedCategory(){
+    const categoriaSelected = document.querySelector(".selected-category");
+    if (categoriaSelected) {
+        categoriaSelected.classList.remove("none");
+    }
+    setTimeout(() => {
+        categoriaSelected.classList.add("none");
+    }, 3000)
+}
+
+
+setBackground(type);
+
+setInterval(() => {
+    Background();
+}, 10000)
+
+if(selector)
+    selector.addEventListener("change", (e) => {
+    Background();
+    selectedCategory();
+});
