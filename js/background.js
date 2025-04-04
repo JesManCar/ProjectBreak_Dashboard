@@ -8,7 +8,9 @@ function setIndexTextBackground(){
         const backgroundSelected = document.getElementById("background-selected");
         const num = localStorage.getItem("backgroundType") || 0;
         const nameBack = num == 0 ? "Naturaleza" : (num == 1 ? "Deportes" : "Espacio Exterior");
-        backgroundSelected.innerHTML = `Fondo seleccionado: ${nameBack}`;
+        backgroundSelected.innerHTML = 
+        `Fondo seleccionado:
+        <div class="background-name">${nameBack}</div>`;
     }
 }
 

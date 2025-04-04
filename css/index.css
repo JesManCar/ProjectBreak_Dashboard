@@ -9,3 +9,11 @@ body{
     width: 30%;
     height: 40vh;
 }
+
+.element:hover {
+    background-color: rgba(31, 31, 31, 0.6);
+}
+
+.background-name{
+    font-size: 2em;;
+}

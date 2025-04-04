@@ -1,5 +1,3 @@
-console.log("Linked")
-
 const texts = [
 "Es hora de descansar. Apaga y sigue mañana",
 "Buenos días, desayuna fuerte y a darle al código",
