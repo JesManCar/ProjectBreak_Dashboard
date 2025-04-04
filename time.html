@@ -4,38 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/time.css">
     <link rel="stylesheet" href="./css/background.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Dashboard JesMan</title>
+    <title>Time</title>
 </head>
 <body>
-    Dashboard
     <div class="background" id="background"></div>
-    <div class ="menu">
-        <a id="btn" href="./background.html">Go to Background</a>
-        <a id="btn" href="./time.html">Go to Time</a>
-    </div>
+    <header>
+        <div class ="menu">
+            <a id="btn" href="./index.html">Go to Index</a>
+            <a id="btn" href="./background.html">Go to Background</a>
+        </div>
+    </header>
 
     <div class="container">
         <div class="element">
-            
-        </div>
-        <div class="element">
             <div id="time" class="time"></div>
             <div id="day" class="day"></div>
-        </div>
-        <div class="element">
-            
-        </div>
-        <div class="element">
-            
-        </div>
-        <div class="element">
-            <div id="background-selected" class="background-selected"></div>
+            <p id="text" class="text"></p>
         </div>
     </div>
 
-    <script src="./js/index.js"></script>
     <script src="./js/time.js"></script>
     <script type=module src="./js/background.js"></script>
 </body>

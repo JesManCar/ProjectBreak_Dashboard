@@ -3,6 +3,15 @@ import images from './imagesArray.js';
 const body = document.getElementById("background");
 let selector;
 
+function setIndexTextBackground(){
+    if(document.getElementById("background-selected")){
+        const backgroundSelected = document.getElementById("background-selected");
+        const num = localStorage.getItem("backgroundType") || 0;
+        const nameBack = num == 0 ? "Naturaleza" : (num == 1 ? "Deportes" : "Espacio Exterior");
+        backgroundSelected.innerHTML = `Fondo seleccionado: ${nameBack}`;
+    }
+}
+
 if(document.getElementById("select")){
     selector = document.getElementById("select");
 }
@@ -41,6 +50,7 @@ function selectedCategory(){
 
 
 setBackground(type);
+setIndexTextBackground();
 
 setInterval(() => {
     Background();

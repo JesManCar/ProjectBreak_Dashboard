@@ -1,0 +1,21 @@
+.time{
+    font-size: 6em;
+    color: white;
+    text-shadow: 4px 4px rgb(0, 0, 0);
+}
+.day{
+    font-size: 3em;
+    color: white;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+}
+
+.text {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    padding: 20px;
+    margin: 20px;
+    margin-top: 5vh;
+    min-height: 5vh;
+    max-height: 10vh;
+}
