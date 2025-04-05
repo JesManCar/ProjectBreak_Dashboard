@@ -4,7 +4,7 @@ const texts = [
 "Echa un rato más pero no olvides comer",
 "Espero que hayas comido",
 "Buenas tardes, el último empujón",
-"Esto ya son horas extras, ... piensa en parar pronto",
+"Esto ya son horas extras, piensa en parar pronto",
 "Buenas noches, es hora de pensar en parar y descansar"
 ]
 

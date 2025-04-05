@@ -29,7 +29,6 @@ body{
     align-items: center;
     flex-wrap: wrap;
     margin-top: 5vh;
-    height: 2vh;
 }
 .container h1{
     color: white;

@@ -20,11 +20,16 @@
 
     <div class="container">
         <div class="element">
-            <h1>Generador de Contraseñas</h1>
-            <p>Número de Caracteres: </p><input type="number" id="length" class="input" value="12" min="12" max="50">
-            <button id="btn" class="btn">Generar Contraseña</button>
-            <p id="passGen" class="pass">1234</p>
+            <h1 class="tittle">Generador de Contraseñas</h1>
+            <h2>Número de Caracteres: </h2>
+            <input id="passLength" type="number" class="input" value="12" min="12" max="50">
+            <button id="btnPassword" class="btn">Generar Contraseña</button>
         </div>
+        <div class="element small">
+            <p id="passGen" class="pass"></p>
+        </div>
+    </div>
+    <script src="./js/pass.js"></script>    
     <script type=module src="./js/background.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+h2{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    margin: 0.8em
+}
+.tittle{
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin-bottom: 1em;;
+}
+
+.input {
+    width: 6%;
+    padding: 0.6em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: rgba(31, 31, 31, 0.4);
+    color: white;
+    font-size: 1.6em;
+    margin-bottom: 1em;
+}
+
+.pass{
+    min-height: 5vh;
+    font-size: 2.5em;
+    color: white;
+    font-weight: 900;
+    padding: 0.5em;
+    letter-spacing: 0.1em;
+}
+
+.container{
+    margin-top: 5vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.element{
+    min-height: 10vh;
+    text-overflow: "";
+}
+
+.small {
+    margin: 2vh;
+    width: 80%;
+    height: 20vh;
+}
+
+.small-text {
+    font-size: 1.5em;
+}
