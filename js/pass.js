@@ -36,5 +36,9 @@ function generatePassword() {
 
 btnPassword.addEventListener("click", () => {
     passLength = document.getElementById("passLength").value;
+    if(passLength < 12 || passLength > 50) {
+        alert("La contraseña debe tener entre 12 y 50 caracteres.");
+        return;
+    }
     passDIV.innerHTML = generatePassword()
 });
