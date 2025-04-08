@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/background.css">
     <link rel="stylesheet" href="./css/pass.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/background.css">
     <title>Pass Generator</title>
 </head>
 <body>
@@ -18,14 +19,14 @@
     </header>
     <div class="background" id="background"></div>
 
-    <div class="container">
-        <div class="element">
-            <h1 class="tittle">Generador de Contraseñas</h1>
+    <div class="flex-center-column wrap">
+        <div class="flex-center-column background-gray medium medium-height medium-margin">
+            <h1 class="main-title">Generador de Contraseñas</h1>
             <h2>Número de Caracteres: </h2>
             <input id="passLength" type="number" class="input" value="12" min="12" max="50">
             <button id="btnPassword" class="btn">Generar Contraseña</button>
         </div>
-        <div class="element small">
+        <div class="flex-center-column background-gray large x-small-height">
             <p id="passGen" class="pass"></p>
         </div>
     </div>

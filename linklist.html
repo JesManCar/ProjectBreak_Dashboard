@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/background.css">
     <link rel="stylesheet" href="./css/linklist.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/background.css">
     <title>LinkList</title>
 </head>
 <body>
@@ -16,25 +17,29 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="element very-small" id="linklistInput">
-            <h3>Nombre: </h3>
-            <input id="linklistName" type="text" class="input" placeholder="Nombre">
-            <h3>URL: </h3>
-            <input id="linklistURL" type="text" placeholder="https://example.com">
+    <div class="flex-center-column wrap">
+        <div class="flex-center-column background-gray medium small-height medium-margin" id="linklistInput">
+            <div class="flex-center-row x-small-margin">
+                <h3 class="second-title">Nombre:  </h3>
+                <input id="linklistName" type="text" class="input" placeholder="Nombre">
+            </div>
+            <div class="flex-center-row x-small-margin">
+                <h3 class="second-title">URL:  </h3>
+                <input id="linklistURL" type="text" placeholder="https://example.com">
+            </div>
             <div>
-                <label for="linklistInsertHTTPS">Insertar https://</label>
-                <input id="linklistInsertHTTPS" type="checkbox" checked>
+                <label class="third-title" for="linklistInsertHTTPS">Insertar "https://"</label>
+                <input id="linklistInsertHTTPS" class="checkbox" type="checkbox" checked>
             </div>
             <input id="linklistAdd" type="button" value="Añadir">
-            <div>
-                <input id="linklistClear" type="button" class="btn" value="Limpiar">
-            </div>
         </div>
-        <div class="element container">
-            <h3>Lista de Enlaces</h3>
-            <ul id="linklist">
+        <div class="flex-column wrap background-gray large medium-height" id="linklistContainer">
+            <h3 class="third-title small-margin">Lista de Enlaces</h3>
+            <ul id="linklist" class="flex-center-row wrap">
             </ul>
+        </div>
+        <div>
+            <input id="linklistClear" type="button" class="btn" value="Limpiar">
         </div>
     </div>
 

@@ -1,11 +1,62 @@
-.container{
-    margin-top: 5vh;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    color:white;
+input[type=text] {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
-.very-small {
-    margin: 2vh;
-    width: 40%;
-    height: 20vh;
+
+.third-title {
+    font-size: 1.5rem;
+    margin-left: 1em;
+    color: white;
+
+}
+
+.checkbox{
+    margin-left: 1em;
+    margin-top: 1em;
+    color: white;
+    transform: scale(1.7);
+}
+
+input[type=button]{
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(110, 110, 110);
+    color: white;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.x-small-margin{
+    margin: 0.5vh;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.linklist-item{
+    padding: 1em;
+    margin-left: 1em;
+    margin-top: 0.3em;
+    background-color: rgba(31, 31, 31, 0.5);
+    color: white;
+}
+
+.linklist-item button{
+    background-color: rgb(110, 110, 110);
+    border: none;
+    font-size: 0.5em;
+    padding: 0.6em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.linklist-item a:link, .linklist-item a:visited{
+    text-decoration: none;
+    color: white;
 }

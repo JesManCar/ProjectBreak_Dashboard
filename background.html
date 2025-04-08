@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/background.css">
     <title>Background</title>
 </head>
@@ -16,17 +17,17 @@
         </div>
     </header>
     <div class="background" id="background"></div>
-        <div class="container">
-            <div class="element">
-                <h1>Selecciona una categoria</h1>
-                <select id="select" class="select">
-                    <option value="" disabled selected>Selecciona una categoria</option>
-                    <option value="0">Naturaleza</option>
-                    <option value="1">Deportes</option>
-                    <option value="2">Espacio Exterior</option>
-                </select>
-                <h2 class="selected-category none">Categoria Seleccionada!</h2>
-            </div>
+
+    <div class="flex-center-column wrap">
+        <div class="flex-center-column medium medium-height background-gray medium-margin">
+            <h1 class="main-title">Selecciona una categoria</h1>
+            <select id="select" class="select big-selector">
+                <option value="" disabled selected>Selecciona una categoria</option>
+                <option value="0">Naturaleza</option>
+                <option value="1">Deportes</option>
+                <option value="2">Espacio Exterior</option>
+            </select>
+            <h2 class="selected-category none">Categoria Seleccionada!</h2>
         </div>
     </div>
     <script type=module src="./js/background.js"></script>
