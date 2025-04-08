@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/background.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -34,36 +33,43 @@
 
     <div class="flex-center-row wrap">
         <div class="flex-center-column small medium-height background-gray pointer small-margin" id="linklistContainer">
-            <div class="flex-center-column large x-small-height" id="linklistInput">
-                <h3>Nombre: </h3>
-                <input id="linklistName" type="text" class="input" placeholder="Nombre">
-                <h3>URL: </h3>
-                <input id="linklistURL" type="text" placeholder="https://example.com">
+            <div class="flex-column large x-small-height" id="linklistInput">
+                <div class="flex-row"> 
+                    <h3>Nombre: </h3>
+                    <input id="linklistName" type="text" class="input" placeholder="Nombre">
+                </div>
+                <div class="flex-row">
+                    <h3>URL: </h3>
+                    <input id="linklistURL" type="text" placeholder="https://example.com">
+                </div>
                 <div>
                     <label for="linklistInsertHTTPS">Insertar https://</label>
                     <input id="linklistInsertHTTPS" type="checkbox" checked>
                 </div>
-                <input id="linklistAdd" type="button" value="Añadir">
-                <div>
-                    <input id="linklistClear" type="button" class="btn" value="Limpiar">
-                </div>
+                <button class="btn" id="linklistAdd" value="Añadir">Añadir</button>
             </div>
             <div class="x-large x-small-height">
-                <h3>Lista de Enlaces</h3>
-                <ul id="linklist">
-                </ul>
+                <h3 class="bold">Lista de Enlaces</h3>
+                <ul id="linklist" class="flex-center-row wrap over-scroll linklist"></ul>
             </div>
         </div>
         <div class="flex-center-column small medium-height background-gray pointer small-margin" id="timeContainer">
-            <div id="time" class="time"></div>
-            <div id="day" class="day"></div>
+            <div id="time" class="time main-title"></div>
+            <div id="day" class="day main-title"></div>
         </div>
         <div class="flex-center-column small medium-height background-gray pointer small-margin" id="passGenContainer">
-            <p>Número de Caracteres: </p><input id="passLength" type="number" class="input" value="12" min="12" max="50">
+            <h3 class="second-title bold">Generador de Contraseñas</h3>
+            <div class="flex-center-row">
+                <p>Número de Caracteres: </p>
+                <input id="passLength" type="number" class="input" value="12" min="12" max="50">
+            </div>
             <button id="btnPassword" class="btn">Generar Contraseña</button>
-            <p id="passGen" class="pass">1234</p>
+            <p id="passGen" class="pass small-margin large"></p>
         </div>
-        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="currentWeather">
+        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="weatherContainer">
+            <h3 class="second-title bold">Clima</h3>
+            <div class="flex-center-column weather" id="currentWeather">
+            </div>
         </div>
         <div class="flex-center-column small medium-height background-gray pointer small-margin" id="backgroundContainer">
             <div id="background-selected" class="background-selected"></div>

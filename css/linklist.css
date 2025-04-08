@@ -36,10 +36,6 @@ input[type=button]{
     margin: 0.5vh;
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
 .linklist-item{
     padding: 1em;
     margin-left: 1em;

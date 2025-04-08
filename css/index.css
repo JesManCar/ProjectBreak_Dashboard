@@ -7,3 +7,61 @@ body{
 .background-name{
     font-size: 2em;;
 }
+
+.pass{
+    height: 2vh;
+    text-align: center;
+}
+
+input[type=text],
+input[type=number] {
+    font-size: 0.8em;
+    padding: 0.3em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 1em;
+}
+
+.weather{
+    color: white;
+    font-size: 1.5em;
+}
+.weather :nth-child(n){
+    margin: 0.7em;
+}
+
+.linklist{
+    max-height: 18vh;
+}
+.linklist::-webkit-scrollbar{
+    width: 6px;
+}
+.linklist::-webkit-scrollbar-corner{
+    background-color:transparent;
+}
+.linklist::-webkit-scrollbar-thumb{
+    background: rgba(65, 65, 65, 0.8); /* color of the scroll track */
+    border-radius: 20px;       /* roundness of the scroll track */
+    margin: 10px;
+}
+
+.linklist-item{
+    padding: 0.6em;
+    margin-left: 0.4em;
+    margin-top: 0.3em;
+    background-color: rgba(31, 31, 31, 0.5);
+    color: white;
+}
+
+.linklist-item button{
+    background-color: rgb(110, 110, 110);
+    border: none;
+    font-size: 0.5em;
+    padding: 0.6em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.linklist-item a:link, .linklist-item a:visited{
+    text-decoration: none;
+    color: white;
+}

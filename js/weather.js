@@ -9,7 +9,7 @@ function currentWeatherTemplate(weather) {
     return  `<div class="flex-center-row">
             <div class="main-info">
             <img src="${weather.condition.icon}" alt="${weather.condition.text}">
-            <h3 class="temperature">${weather.temp_c}°C</h3>
+            <h3 class="temperature bold">${weather.temp_c}°C</h3>
             </div>
             <div class="extra-info">
             <p>Precipitaciones: ${weather.precip_in}%</p>
@@ -39,7 +39,7 @@ function getWeather() {
             return response.json();
         })
         .then((data) => {
-            titleWeather.innerText = `El tiempo en: ${city}`;
+            if(titleWeather) titleWeather.innerText = `El tiempo en: ${city}`;
             weatherDIV.innerHTML += currentWeatherTemplate(data.current);
             data.forecast.forecastday[0].hour.forEach((hour) => {
                 forecastDIV.innerHTML+= forecastWeatherTemplate(hour);

@@ -10,7 +10,7 @@ function setIndexTextBackground(){
         const nameBack = num == 0 ? "Naturaleza" : (num == 1 ? "Deportes" : "Espacio Exterior");
         backgroundSelected.innerHTML = 
         `Fondo seleccionado:
-        <div class="background-name">${nameBack}</div>`;
+        <div class="background-name bold">${nameBack}</div>`;
     }
 }
 

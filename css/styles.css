@@ -50,6 +50,14 @@ table {
 /*  RESET CSS END  */
 
 
+body {
+    color: white;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 .flex-center-column {
     display: flex;
     justify-content: center;
@@ -65,6 +73,13 @@ table {
 .flex-row{
     display: flex;
     flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.over-scroll{
+    overflow: scroll;
 }
 .wrap {
     flex-wrap: wrap;
@@ -155,21 +170,30 @@ table {
     cursor: default;
     text-decoration: none;
     pointer-events: none;
-    color: rgb(124, 124, 124);
-    
+    color: rgb(124, 124, 124);   
 }
 
 .main-title{
     color: white;
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 50px;
 }
 .second-title{
     color: white;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.btn{
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(110, 110, 110);
+    color: white;
+    cursor: pointer;
+    margin: 1em;
 }
 
 .big-selector{
