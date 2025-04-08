@@ -66,7 +66,7 @@ function addLinkToLinkList(){
 function linklistElementTemplate(link){
     return `<li class="linklist-item" data-id="${link.id}">
         <a href="${link.url}" target="_blank">${link.name}</a>
-        <button class="delete-btn" data-url="${link.url}" onclick=removeElement(${link.id})>x</button>
+        <button class="delete-btn" data-url="${link.url}" onclick=removeElement(${link.id})>❌</button>
         </li>`;
 }
 
@@ -84,6 +84,12 @@ function clear(){
 
 linklistAdd.addEventListener("click", function () {
     addLinkToLinkList();
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        addLinkToLinkList();
+    }
 });
 
 if(linklistClear){
