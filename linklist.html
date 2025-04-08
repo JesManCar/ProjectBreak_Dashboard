@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/linklist.css">
+    <title>LinkList</title>
+</head>
+<body>
+    <div class="background" id="background"></div>
+    <header>
+        <div class ="menu">
+            <a id="btn" href="./index.html">Go to Index</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="element very-small" id="linklistInput">
+            <h3>Nombre: </h3>
+            <input id="linklistName" type="text" class="input" placeholder="Nombre">
+            <h3>URL: </h3>
+            <input id="linklistURL" type="text" placeholder="https://example.com">
+            <div>
+                <label for="linklistInsertHTTPS">Insertar https://</label>
+                <input id="linklistInsertHTTPS" type="checkbox" checked>
+            </div>
+            <input id="linklistAdd" type="button" value="Añadir">
+            <div>
+                <input id="linklistClear" type="button" class="btn" value="Limpiar">
+            </div>
+        </div>
+        <div class="element container">
+            <h3>Lista de Enlaces</h3>
+            <ul id="linklist">
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/linklist.js"></script>
+    <script type=module src="./js/background.js"></script>
+</body>
+</html>

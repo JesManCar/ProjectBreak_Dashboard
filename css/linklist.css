@@ -1,0 +1,11 @@
+.container{
+    margin-top: 5vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color:white;
+}
+.very-small {
+    margin: 2vh;
+    width: 40%;
+    height: 20vh;
+}

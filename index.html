@@ -15,11 +15,30 @@
         <a id="btn" href="./time.html">Go to Time</a>
         <a id="btn" href="./pass.html">Go to Pass Generator</a>
         <a id="btn" href="./weather.html">Go to Weather</a>
+        <a id="btn" href="./linklist.html">Go to LinkList</a>
     </div>
 
     <div class="container">
         <div class="element">
-            
+            <div class="element very-small" id="linklistInput">
+                <h3>Nombre: </h3>
+                <input id="linklistName" type="text" class="input" placeholder="Nombre">
+                <h3>URL: </h3>
+                <input id="linklistURL" type="text" placeholder="https://example.com">
+                <div>
+                    <label for="linklistInsertHTTPS">Insertar https://</label>
+                    <input id="linklistInsertHTTPS" type="checkbox" checked>
+                </div>
+                <input id="linklistAdd" type="button" value="Añadir">
+                <div>
+                    <input id="linklistClear" type="button" class="btn" value="Limpiar">
+                </div>
+            </div>
+            <div class="element container">
+                <h3>Lista de Enlaces</h3>
+                <ul id="linklist">
+                </ul>
+            </div>
         </div>
         <div class="element">
             <div id="time" class="time"></div>
@@ -40,6 +59,7 @@
     <script src="./js/index.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/weather.js"></script>
+    <script src="./js/linklist.js"></script>
     <script src="./js/pass.js"></script>
     <script type=module src="./js/background.js"></script>
 </body>
