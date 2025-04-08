@@ -2,9 +2,36 @@ const APIKEY = "795ccf54192441a6a6c101516250504";
 const city = "Malaga";
 
 const weatherDIV = document.getElementById("currentWeather");
+const forecastDIV = document.getElementById("forecastWeather");
 
-function getCurrentWeather() {
-    const ENDPOINT = `https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${city}&aqi=no`
+
+function currentWeatherTemplate(weather) {
+    return  `<div class="flex">
+            <div class="main-info">
+            <img src="${weather.condition.icon}" alt="${weather.condition.text}">
+            <h3 class="temperature">${weather.temp_c}°C</h3>
+            </div>
+            <div class="extra-info">
+            <p>Precipitaciones: ${weather.precip_in}%</p>
+            <p>Humedad: ${weather.humidity}%</p>
+            <p>Viento: ${weather.wind_kph} km/h</p>
+            </div>
+            </div>
+            `
+}
+
+function forecastWeatherTemplate(weather) {
+    return `<div class="forecast-item">
+            <h3>${weather.time.slice(11)}</h3>
+            <img src="${weather.condition.icon}" alt="${weather.condition.text}">
+            <p>${weather.temp_c}°C</p>
+            </div>`
+}
+
+
+function getWeather() {
+     const ENDPOINT = `https://api.weatherapi.com/v1/forecast.json?key=${APIKEY}&q=${city}&days=1&aqi=no&alerts=yes`
+    //const ENDPOINT = `https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${city}&aqi=no`
 
     fetch(ENDPOINT)
         .then((response) => {
@@ -12,25 +39,24 @@ function getCurrentWeather() {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
-            weatherDIV.innerHTML = `
-                <h2>El tiempo en ${data.location.name}</h2>
-                <div class="flex">
-                <div class="main-info">
-                <img src="${data.current.condition.icon}" alt="${data.current.condition.text}">
-                <h3 class="temperature">${data.current.temp_c}°C</h3>
-                </div>
-                <div class="extra-info">
-                <p>Precipitaciones: ${data.current.precip_in}%</p>
-                <p>Humedad: ${data.current.humidity}%</p>
-                <p>Viento: ${data.current.wind_kph} km/h</p>
-                </div>
-                </div>
-                `
+            weatherDIV.innerHTML = `<h2>El tiempo en ${data.location.name}</h2>`
+            weatherDIV.innerHTML += currentWeatherTemplate(data.current);
+            data.forecast.forecastday[0].hour.forEach((hour) => {
+                forecastDIV.innerHTML+= forecastWeatherTemplate(hour);
+            })
     })
         .catch((error) => {
             console.error("Error: No se pudo procesar la solicitud")
         });
 }
 
-getCurrentWeather();
+function invertScrollDirection (){
+    forecastDIV.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        forecastDIV.scrollLeft += event.deltaY;
+    });
+}
+
+
+getWeather();
+invertScrollDirection();

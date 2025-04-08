@@ -37,3 +37,41 @@
     height: 100%;
     object-fit: contain;
 }
+
+.forecast{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 80%;
+    margin-top: 5vh;
+}
+
+.forecast::-webkit-scrollbar{
+    width: 12px;;
+}
+.forecast::-webkit-scrollbar-track{
+    background: rgba(65, 65, 65, 0.6); /* color of the scroll track */
+    border-radius: 20px;       /* roundness of the scroll track */
+    margin: 10px;
+}
+
+.forecast::-webkit-scrollbar-thumb{
+    background-color: rgba(44, 44, 44, 0.6); /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(1, 46, 129,0.6); /* creates padding around scroll thumb */
+}
+.forecast::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(31, 31, 31, 0.6); /* color of the scroll thumb on hover */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(1, 46, 129,0.8); /* creates padding around scroll thumb */
+}
+
+.forecast-item{
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
