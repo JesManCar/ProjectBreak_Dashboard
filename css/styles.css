@@ -151,8 +151,12 @@ table {
     margin-bottom: 0.3em;
 }
 
-.disabled{
-    cursor: not-allowed;
+.disabled {
+    cursor: default;
+    text-decoration: none;
+    pointer-events: none;
+    color: rgb(124, 124, 124);
+    
 }
 
 .main-title{
