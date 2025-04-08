@@ -124,17 +124,35 @@ table {
 }
 
 .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(34, 34, 34,0.8);
     color: white;
-    top: 0;
-    left: 0;
-    z-index: 1;
     padding: 20px;
     box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
 }
 .menu a:link, .menu a:visited{
     text-decoration: none;
     color: white;
+}
+.menu a{
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.menu img{
+    width: 35%;
+    margin-bottom: 0.3em;
+}
+
+.disabled{
+    cursor: not-allowed;
 }
 
 .main-title{
