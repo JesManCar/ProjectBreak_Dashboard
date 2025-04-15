@@ -38,7 +38,7 @@
     </header>
     <div class="background" id="background"></div>
 
-    <div class="flex-center-column wrap">
+    <div class="flex-center-row wrap">
         <div class="flex-center-column medium medium-height background-gray small-margin">
             <h1 class="main-title">Selecciona una categoria</h1>
             <select id="select" class="select big-selector">
@@ -48,6 +48,22 @@
                 <option value="2">Espacio Exterior</option>
             </select>
             <h2 class="selected-category none">Categoria Seleccionada!</h2>
+        </div>
+        <div class="flex-center-column small medium-height background-gray">
+            <div id="speedSelectorContainer" class="flex-center-column wrap">
+                <h2 class="second-title">Selecciona la velocidad de cambio de Imagen</h2>
+                <select id="selectSpeed" class="select big-selector small-margin">
+                    <option value="" disabled selected>Selecciona una velocidad</option>
+                    <option value="15000">Lento (15seg)</option>
+                    <option value="10000">Normal (10seg)</option>
+                    <option value="5000">Rapido (5seg)</option>
+                </select>
+                <h2 id="speedSelected" class="selected-category none">Velocidad Seleccionada!</h2>
+            </div>
+        </div>
+        <div class="flex-center-column x-large medium-height background-gray small-margin">
+            <h2 class="second-title">Galeria de Imagenes de la categoría actual</h2>
+            <ul class="flex-row wrap" id="galleryContainer"></ul>
         </div>
     </div>
     <script type=module src="./js/background.js"></script>

@@ -2,6 +2,8 @@ import images from './imagesArray.js';
 
 const body = document.getElementById("background");
 let selector;
+let selectorSpeed;
+let idInterval;
 
 function setIndexTextBackground(){
     if(document.getElementById("background-selected")){
@@ -12,12 +14,25 @@ function setIndexTextBackground(){
         `Fondo seleccionado:
         <div class="background-name bold">${nameBack}</div>`;
     }
+    if(document.getElementById("speed-selected")){
+        const speedSelected = document.getElementById("speed-selected");
+        const num = localStorage.getItem("speedChange") || 10000;
+        const nameBack = num == 5000 ? "Rápido (5'')" : (num == 10000 ? "Normal (10'')" : "Lento (15'')");
+        speedSelected.innerHTML = 
+        `Velocidad de cambio seleccionada:
+        <div class="background-name bold">${nameBack}</div>`;
+    }
 }
 
 if(document.getElementById("select")){
     selector = document.getElementById("select");
 }
 let type = localStorage.getItem("backgroundType") || 0;
+
+if(document.getElementById("selectSpeed")){
+    selectorSpeed = document.getElementById("selectSpeed");
+}
+let speedChange = localStorage.getItem("speedChange") || 10000;
 
 function setBackground(type){
     body.style.backgroundImage = `linear-gradient(rgba(182, 182, 182, 0.37), rgba(61, 61, 61, 0.616)),
@@ -40,26 +55,51 @@ function Background(){
     }, 1000)
 }
 
-function selectedCategory(){
-    const categoriaSelected = document.querySelector(".selected-category");
-    if (categoriaSelected) {
-        categoriaSelected.classList.remove("none");
+function selectedCategory(element){
+    if (element) {
+        element.classList.remove("none");
     }
     setTimeout(() => {
-        categoriaSelected.classList.add("none");
+        element.classList.add("none");
     }, 3000)
 }
 
-
 setBackground(type);
 setIndexTextBackground();
+chargeGallery();
 
-setInterval(() => {
+idInterval = setInterval(() => {
     Background();
-}, 10000)
+}, speedChange || 10000)
 
 if(selector)
     selector.addEventListener("change", (e) => {
-    Background();
-    selectedCategory();
+        Background();
+        chargeGallery();
+        selectedCategory(document.querySelector(".selected-category"));
 });
+
+if(selectorSpeed)
+    selectorSpeed.addEventListener("change", (e) => {
+        speedChange = selectorSpeed.value;
+        localStorage.setItem("speedChange", speedChange);
+        selectedCategory(document.getElementById("speedSelected"));
+        clearInterval(idInterval);
+        idInterval = setInterval(() => {
+            Background();
+        }, speedChange)
+});
+
+
+function chargeGallery (){
+    if(selector && selector.value) type = selector.value;
+    const galleryContainer = document.getElementById("galleryContainer");
+    galleryContainer.innerHTML ="";
+    images[type].imgs.forEach(img => {
+        galleryContainer.insertAdjacentHTML("afterbegin",`
+        <li class="preview-img">
+            <img src=${images[type].path}${img}>
+        </li>
+        `)
+    });
+}
