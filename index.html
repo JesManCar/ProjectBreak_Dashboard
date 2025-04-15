@@ -10,71 +10,71 @@
 </head>
 <body>
     <div class="background" id="background"></div>
-    <div class ="menu">
-        <a href="./linklist.html">
-            <img src="./img/icons/linklist.png">
-            <p>LinkList</p>
-        </a>
-        <a href="./time.html">
-            <img src="./img/icons/schedule.png">
-            <p>Clock</p>
-        </a>
-        <a href="./pass.html">
-            <img src="./img/icons/password.png">
-            <p>Password Gen</p>
-        </a>
-        <a href="./weather.html"><img src="./img/icons/weather.png">
-            <p>Weather</p>
-        </a>
-        <a href="./background.html" ><img src="./img/icons/wallpaper.png">
-            <p>Background</p>
-        </a>
-    </div>
-
-    <div class="flex-center-row wrap">
-        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="linklistContainer">
-            <div class="flex-column large x-small-height" id="linklistInput">
-                <div class="flex-row"> 
-                    <h3>Nombre: </h3>
-                    <input id="linklistName" type="text" class="input" placeholder="Nombre">
+        <div class ="menu">
+            <a href="./linklist.html">
+                <img src="./img/icons/linklist.png">
+                <p>LinkList</p>
+            </a>
+            <a href="./time.html">
+                <img src="./img/icons/schedule.png">
+                <p>Clock</p>
+            </a>
+            <a href="./pass.html">
+                <img src="./img/icons/password.png">
+                <p>Password Gen</p>
+            </a>
+            <a href="./weather.html"><img src="./img/icons/weather.png">
+                <p>Weather</p>
+            </a>
+            <a href="./background.html" ><img src="./img/icons/wallpaper.png">
+                <p>Background</p>
+            </a>
+        </div>
+    
+        <div class="flex-center-row wrap">
+            <div class="flex-center-column small medium-height background-gray small-margin" id="linklistContainer">
+                <div class="flex-column large x-small-height" id="linklistInput">
+                    <div class="flex-row"> 
+                        <h3>Nombre: </h3>
+                        <input id="linklistName" type="text" class="input" placeholder="Nombre">
+                    </div>
+                    <div class="flex-row">
+                        <h3>URL: </h3>
+                        <input id="linklistURL" type="text" placeholder="https://example.com">
+                    </div>
+                    <div>
+                        <label for="linklistInsertHTTPS">Insertar https://</label>
+                        <input id="linklistInsertHTTPS" type="checkbox" checked>
+                    </div>
+                    <button class="btn" id="linklistAdd" value="Añadir">Añadir</button>
                 </div>
-                <div class="flex-row">
-                    <h3>URL: </h3>
-                    <input id="linklistURL" type="text" placeholder="https://example.com">
+                <div class="x-large x-small-height">
+                    <h3 class="bold">Lista de Enlaces</h3>
+                    <ul id="linklist" class="flex-center-row wrap over-scroll linklist"></ul>
                 </div>
-                <div>
-                    <label for="linklistInsertHTTPS">Insertar https://</label>
-                    <input id="linklistInsertHTTPS" type="checkbox" checked>
+            </div>
+            <div class="flex-center-column small medium-height background-gray small-margin order-1" id="timeContainer">
+                <div id="time" class="time main-title"></div>
+                <div id="day" class="day main-title"></div>
+            </div>
+            <div class="flex-center-column small medium-height background-gray small-margin" id="passGenContainer">
+                <h3 class="second-title bold">Generador de Contraseñas</h3>
+                <div class="flex-center-row">
+                    <p>Número de Caracteres: </p>
+                    <input id="passLength" type="number" class="input" value="12" min="12" max="50">
                 </div>
-                <button class="btn" id="linklistAdd" value="Añadir">Añadir</button>
+                <button id="btnPassword" class="btn">Generar Contraseña</button>
+                <p id="passGen" class="pass small-margin large"></p>
             </div>
-            <div class="x-large x-small-height">
-                <h3 class="bold">Lista de Enlaces</h3>
-                <ul id="linklist" class="flex-center-row wrap over-scroll linklist"></ul>
+            <div class="flex-center-column small medium-height background-gray small-margin" id="weatherContainer">
+                <h3 class="second-title bold">Clima</h3>
+                <div class="flex-center-column weather" id="currentWeather">
+                </div>
             </div>
-        </div>
-        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="timeContainer">
-            <div id="time" class="time main-title"></div>
-            <div id="day" class="day main-title"></div>
-        </div>
-        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="passGenContainer">
-            <h3 class="second-title bold">Generador de Contraseñas</h3>
-            <div class="flex-center-row">
-                <p>Número de Caracteres: </p>
-                <input id="passLength" type="number" class="input" value="12" min="12" max="50">
-            </div>
-            <button id="btnPassword" class="btn">Generar Contraseña</button>
-            <p id="passGen" class="pass small-margin large"></p>
-        </div>
-        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="weatherContainer">
-            <h3 class="second-title bold">Clima</h3>
-            <div class="flex-center-column weather" id="currentWeather">
+            <div class="flex-center-column small medium-height background-gray small-margin" id="backgroundContainer">
+                <div id="background-selected" class="background-selected"></div>
             </div>
         </div>
-        <div class="flex-center-column small medium-height background-gray pointer small-margin" id="backgroundContainer">
-            <div id="background-selected" class="background-selected"></div>
-        </div>
-    </div>
 
     <script src="./js/index.js"></script>
     <script src="./js/time.js"></script>

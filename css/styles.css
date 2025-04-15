@@ -206,8 +206,94 @@ body {
     font-size: 1.5rem;
     margin-bottom: 20px;
     justify-content: center;
+    margin-top: 5%;
 }
 .big-selector:hover {
     background-color: rgb(110, 110, 110,0.8);
     cursor: pointer;
+}
+
+/* MOBILE MEDIA*/
+@media (width <= 900px) or (height <= 700px) {
+    .flex-center-row {
+        flex-direction: column;
+    }
+    .small, 
+    .medium, .large{
+        width: 90%;
+        overflow: scroll;
+    }
+    .order-1{
+        order: -1;
+    }
+    .main-title{
+        font-size: 2rem;
+    }
+    .second-title{
+        margin: 0;
+        padding: 0.2em;;
+        font-size: 1.5rem;
+    }
+    .third-title{
+        font-size: 1.2rem;
+    }
+    .menu a{
+        width: 200px;
+        margin-left: 1rem;
+    }
+    .menu img{
+        width: 50%;
+    }
+    .menu p{
+        display: none;
+    }
+    .background{
+        height: 235vh;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .main-info{
+        display: flex;
+        flex-direction: row ;
+        align-items: center;
+    }
+    .main-info img{
+        width: 30%;
+    }
+    .weather :nth-child(n) {
+        margin: 0.3rem !important;
+        font-size: 1.2rem;
+    }
+    .pass{
+        font-size: 1.2rem;;
+        overflow: hidden;
+        height: 3vh !important;
+    }
+    input[type=button]{
+        font-size: 1rem;
+        margin: 0.2em;
+    }
+    input[type=text]{
+        margin: 0.2em;
+    }
+    .time{
+        font-size: 3.5rem;
+    }
+    .day{
+        font-size: 2rem;
+    }
+    .input{
+        width: 15%
+    }
+    .selected-category{
+        margin-left: 15%;
+    }
+    .big-selector{
+        width: 90%;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-top: 0.5em;
+    }
 }
