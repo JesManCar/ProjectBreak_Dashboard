@@ -1,4 +1,5 @@
-const APIKEY = "795ccf54192441a6a6c101516250504";
+//const APIKEY = "795ccf54192441a6a6c101516250504";
+const APIKEY = "246dd6362fae4b3c9cf194338251904"; /* New API KEY */
 const city = "Malaga";
 
 const weatherDIV = document.getElementById("currentWeather");

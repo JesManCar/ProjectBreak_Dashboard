@@ -47,7 +47,7 @@ function addLinkToLinkList(){
     const id = parseInt(lastIndexLink) + 1;
     
     if(!name || !url){
-        alert("Porfavor, completa todos los campos.");
+        alert("Por favor, completa todos los campos.");
         return;
     }
     if(linklistInsertHTTPS.checked){
