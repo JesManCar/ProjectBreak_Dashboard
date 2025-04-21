@@ -93,6 +93,7 @@ if(selectorSpeed)
 
 function chargeGallery (){
     if(selector && selector.value) type = selector.value;
+    if(document.getElementById("galleryContainer")){
     const galleryContainer = document.getElementById("galleryContainer");
     galleryContainer.innerHTML ="";
     images[type].imgs.forEach(img => {
@@ -102,4 +103,5 @@ function chargeGallery (){
         </li>
         `)
     });
+}
 }
